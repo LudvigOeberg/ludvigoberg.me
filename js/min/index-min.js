@@ -1,0 +1,1 @@
+$(window).scroll(function(){var s=$(window).scrollTop(),o=function(o){var a=o.offset().top,e=0>=a-s-400;return e},a=$("section.safello");o(a)?a.addClass("show"):a.removeClass("show");var e=$("section.chromaway");o(e)?e.addClass("show"):e.removeClass("show");var l=$("section.events");o(l)?l.addClass("show"):l.removeClass("show")});

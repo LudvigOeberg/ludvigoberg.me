@@ -1,0 +1,367 @@
+@import 'nib'
+
+@import '_normalize'
+@import '_mixins'
+
+@font-face
+  font-family Sentinel
+  src url('/fonts/sentinel-book.otf') format('opentype')
+  font-weight 500
+@font-face
+  font-family Sentinel
+  src url('/fonts/sentinel-medium.otf') format('opentype')
+  font-weight 700
+
+@font-face
+  font-family Avenir-Next
+  src url('/fonts/avenirnext-regular.ttf') format('truetype')
+  font-weight 500
+@font-face
+  font-family Avenir-Next
+  src url('/fonts/avenirnext-medium.ttf') format('truetype')
+  font-weight 700
+
+.clearfix
+  clear both
+
+.page-container
+  max-width: 800px;
+  margin: 0 auto;
+
+body
+  font-family Avenir-Next
+  color white
+
+section.top
+  background: rgba(0,0,0,0.60);
+  retina-bg("/images/top-bg", "jpg")
+  padding-top 140px
+  padding-bottom 40px
+  text-align center
+  bg-cover()
+
+  .avatar
+    size 218px
+    border-radius 50%
+    retina-bg("/images/avatar")
+    display block
+    margin 0 auto
+    margin-bottom 76px
+    background-size: cover;
+    @media all and (max-width: 480px)
+      size 150px
+      margin-bottom: 50px;
+
+  h2
+    font-size: 23px;
+
+  .social-icons
+
+    a
+      size 47px
+      display inline-block
+      background-position center center
+      background-repeat no-repeat
+      margin: 50px 20px;
+      transition opacity 0.3s, transform 0.2s
+      &:hover
+        opacity 0.8
+        transform scale(0.9)
+
+    .twitter
+      background-image url("/images/twitter-icon.svg")
+    .linkedin
+      background-image url("/images/linkedin-icon.svg")
+    .mail
+      background-image url("/images/mail-icon.svg")
+
+
+section.safello
+  height 482px
+  retina-bg("/images/safello-bg", "jpg")
+  bg-cover()
+
+  p
+    font-size: 24px;
+    text-align center
+    padding-top 114px
+    padding-bottom 50px
+    transition transform 0.4s, opacity 0.4s
+
+  &:not(.show) 
+    p
+      transform: translateY(-20px);
+      opacity 0
+    .logo
+      transform: translateY(20px);
+      opacity 0
+
+  .logo
+    width 302px
+    height 92px
+    background-image url("/images/safello-logo.svg")
+    bg-contain()
+    margin 0 auto
+    display block
+    transition transform 0.4s, opacity 0.4s
+
+  @media all and (max-width: 480px)
+    height 400px
+    p
+      padding-top 100px
+      padding-bottom 40px
+    .logo
+      transform scale(0.8)
+
+section.chromaway
+  height 617px
+  retina-bg("/images/chromaway-bg", "jpg")
+  color #969999
+  font-size: 22px;
+  padding-top: 95px;
+
+  &:not(.show)
+    .phone
+      transform translateX(-40px)
+      opacity 0
+
+    p, 
+    .logo
+      transform translateY(-10px)
+      opacity 0
+
+  p
+    transition transform 0.3s, opacity 0.3s
+    &:first-of-type
+      transition-delay 0.5s
+    &:last-of-type
+      transition-delay 0.9s
+
+    @media all and (max-width: 450px)
+      font-size: 19px;
+
+  .phone
+    float left
+    retina-bg("/images/chromaway-phone")
+    width 188px
+    height 396px
+    transition transform 0.4s, opacity 0.4s
+
+  .logo
+    width 275px
+    height 131px
+    retina-bg("/images/chromaway-logo")
+    margin-top 25px
+    margin-bottom 33px
+    transition transform 0.3s, opacity 0.3s
+    transition-delay 0.7s
+    display block
+
+  .info
+    width: calc(100% - 300px);
+    float: right;
+    margin-top: 58px;
+
+  @media all and (max-width: 620px)
+    .info
+      float: none;
+      margin: 0 auto;
+      width: calc(100% - 20px);
+      text-align: center;
+      margin-top: -50px;
+
+    .logo
+      margin: 10px auto;
+      transition-delay 0s
+      transform scale(0.8)
+
+    .phone
+      float: none;
+      margin: 0 auto;
+      transform: scale(0.7);
+
+  .divider
+    width 931px
+    height 16px
+    retina-bg("/images/divider")
+    margin 0 auto
+    margin-top 100px
+    bg-contain()
+    @media all and (max-width: 940px)
+      width 700px
+    @media all and (max-width: 700px)
+      width: 600px;
+    @media all and (max-width: 600px)
+      margin-top -20px
+      width: 400px;
+    @media all and (max-width: 420px)
+      width 300px
+
+section.events
+  background-color white
+  text-align center
+
+  p
+    font-size: 22px;
+    color: #3F5B66;
+    text-align center
+    @media all and (max-width: 500px)
+      padding: 20px;
+      font-size: 20px;
+
+  &.show
+    .bitcoinforeningen,
+    .satoshi-square
+      opacity 1
+
+  .bitcoinforeningen
+    width 359px
+    height 118px
+    retina-bg("/images/bitcoinforeningen")
+
+  .satoshi-square
+    width 514px
+    height 94px
+    retina-bg("/images/satoshi-square")
+    transition-delay 0.3s
+
+  .bitcoinforeningen,
+  .satoshi-square
+    display inline-block
+    margin: 60px 28px;
+    transition transform 0.4s, opacity 0.4s
+    opacity 0
+    bg-contain()
+    @media all and (max-width: 620px)
+      margin 40px 10px
+      width 359px
+    @media all and (max-width: 500px)
+      width 300px
+
+section.press
+  text-align center
+  padding-top 100px
+
+  h2
+    font-size: 24px;
+    color: #A1A1A1;
+    text-transform uppercase
+    position relative
+    display inline-block
+    &::before, &::after
+      content ""
+      absolute left -170px top 15px
+      background-color #A1A1A1
+      height 1px
+      width 144px
+    &::after
+      left auto
+      right -170px
+    @media all and (max-width: 440px)
+      &::before, &::after
+        width 80px
+        left -100px
+      &::after
+        left auto
+        right -100px
+
+  ul
+    margin-top 100px
+    margin-bottom 80px
+
+    li
+      display inline-block
+      vertical-align top
+      width: calc(50% - 20px);
+      text-align left
+      margin 10px 0
+      @media all and (max-width: 800px)
+        width 100%
+        margin-left 20px
+        width: calc(100% - 20px);
+
+      .logo
+        size 135px
+        float: left;
+        bg-contain()
+        margin-right: 20px;
+        &.di
+          background-image url("/images/press/di.png");
+        &.borspodden
+          background-image url("/images/press/borspodden.jpg");
+        &.ux-podden
+          background-image url("/images/press/ux-podden.png");
+        &.startup-podden
+          background-image url("/images/press/startuppodden.png");
+        &.dn
+          background-image url("/images/press/dn.jpg");
+        &.va
+          background-image url("/images/press/veckans-affarer.png");
+        &.idg
+          background-image url("/images/press/idg.png");
+        &.vv
+          background-image url("/images/press/vv.jpeg");
+        &.sr
+          background-image url("/images/press/sr.png");
+
+      .info
+
+        time
+          font-size: 17px;
+          color: rgba(0,0,0,0.54);
+          letter-spacing: 0.48px;
+          margin-top: 10px;
+          display: block;
+
+        a
+          font-size: 19px;
+          color: #1981B0;
+          letter-spacing: 0.54px;
+          margin 11px 0
+          display block
+          &:hover
+            text-decoration underline
+          &::before, &::after
+            content '"'
+
+  @media all and (max-width: 490px)
+    padding-top: 50px;
+
+    ul
+      margin-top 50px
+
+      li 
+        .logo
+          size 90px
+
+        .info a
+          font-size: 17px;
+          margin: 7px 0;
+
+
+footer
+  background-color #6E7C82
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  p
+    font-size: 19px;
+    letter-spacing: 0.54px;
+    margin-bottom 20px
+
+  a.mail
+    background-color rgba(white, 0.65);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.14);
+    border-radius: 5px;
+    font-size: 19px;
+    color: #4C5E66;
+    letter-spacing: 0.54px;
+    text-shadow: 0px 1px 0px rgba(255,255,255,0.32);
+    font-weight 700
+    text-transform uppercase
+    padding: 15px 49px;
+    margin-top: 10px;
+    display: inline-block;
+    transition background-color 0.2s
+    &:hover
+      background-color rgba(white, 0.8);
