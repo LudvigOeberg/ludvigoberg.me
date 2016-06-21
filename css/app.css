@@ -654,8 +654,8 @@ section.press h2::after {
   }
 }
 section.press ul {
-  margin-top: 100px;
-  margin-bottom: 80px;
+  max-width: 1420px;
+  margin: 100px auto 80px;
 }
 section.press ul li {
   display: inline-block;
