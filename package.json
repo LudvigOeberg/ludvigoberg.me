@@ -1,0 +1,23 @@
+{
+  "name": "ludvig-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "connect-livereload": "0.5.4",
+    "express": "4.14.0",
+    "gulp": "3.9.1",
+    "gulp-jade": "1.1.0",
+    "gulp-stylus": "2.4.0",
+    "gulp-util": "3.0.7",
+    "nib": "1.1.0",
+    "tiny-lr": "0.2.1"
+  },
+  "scripts": {
+    "start": "./node_modules/gulp/bin/gulp.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
