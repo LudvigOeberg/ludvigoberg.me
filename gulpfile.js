@@ -5,6 +5,7 @@ jade = require('gulp-jade');
 gutil = require('gulp-util');
 stylus = require('gulp-stylus');
 lr = require('tiny-lr')();
+var open = require('gulp-open');
 
 sources = {
   jade: "*.jade",
@@ -41,6 +42,9 @@ gulp.task('serve', function () {
   app.use(express.static(__dirname));
   app.listen(4000);
   lr.listen(35729);
+
+  gulp.src('')
+  .pipe(open({uri: 'http://localhost:4000'}));
 });
 
 gulp.task("default", ["jade", "stylus", "watch", "serve"]);
