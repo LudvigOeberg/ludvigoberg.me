@@ -14,6 +14,13 @@ $(window).scroll(function() {
     $safelloEl.removeClass('show');
   }
 
+  var $genesisEl = $('section.genesis-block');
+  if (reachedEl($genesisEl)) {
+    $genesisEl.addClass('show');
+  } else {
+    $genesisEl.removeClass('show');
+  }
+
   var $chromawayEl = $('section.chromaway');
   if (reachedEl($chromawayEl)) {
     $chromawayEl.addClass('show');

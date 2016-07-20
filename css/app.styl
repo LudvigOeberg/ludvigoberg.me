@@ -113,6 +113,66 @@ section.safello
     .logo
       transform scale(0.8)
 
+section.genesis-block
+  background-image: linear-gradient(-180deg, #9EA7BB 0%, #8795B4 100%);
+  height 460px
+  text-align center
+  position relative
+  &::after
+    content ""
+    retina-bg("/images/genesis-connections")
+    absolute left 0 right 0 top 0 bottom 0
+
+  *
+    position relative
+    z-index 1
+
+  p
+    font-family: Sentinel
+    font-weight 500
+    font-size: 27px;
+    color: rgba(255,255,255,0.89);
+    line-height: 50px;
+    transition transform 0.4s, opacity 0.4s
+    &.first
+      padding-top: 104px;
+    &:not(.first)
+      transition-delay 1s
+
+  .logo
+    width 534px
+    height 54px
+    background-image url("/images/genesis-block-logo.svg")
+    display block
+    bg-contain()
+    margin 20px auto
+    transition transform 0.4s, opacity 0.4s
+
+  &:not(.show) 
+    p
+      transform: translateY(-20px);
+      opacity 0
+      &:not(.first)
+        transform translateY(20px)
+        transition-delay 0s
+    .logo
+      transform: translateY(20px);
+      opacity 0
+
+  @media all and (max-width: 610px)
+    .logo
+      width 450px
+    p
+      font-size 24px
+
+  @media all and (max-width: 500px)
+    .logo
+      width 400px
+
+  @media all and (max-width: 410px)
+    .logo
+      width 370px
+
 section.chromaway
   height 617px
   retina-bg("/images/chromaway-bg", "jpg")
