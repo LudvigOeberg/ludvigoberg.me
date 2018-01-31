@@ -810,6 +810,18 @@ section.press ul li .logo.startup-podden {
 section.press ul li .logo.dn {
   background-image: url("/images/press/dn.jpg");
 }
+section.press ul li .logo.skonanya {
+  background-image: url("/images/press/skonanya.jpg");
+}
+section.press ul li .logo.nyteknik {
+  background-image: url("/images/press/nyteknik.jpg");
+}
+section.press ul li .logo.gp {
+  background-image: url("/images/press/gp.png");
+}
+section.press ul li .logo.nordnet {
+  background-image: url("/images/press/nordnet.png");
+}
 section.press ul li .logo.va {
   background-image: url("/images/press/veckans-affarer.png");
 }
